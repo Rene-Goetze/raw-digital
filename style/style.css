@@ -1,0 +1,200 @@
+/* =========================
+   Grundlayout
+========================= */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #020617 0%,
+    #06091a 40%,
+    #140303 75%,
+    #000000 100%
+  );
+}
+
+.wrapper {
+  max-width: 2000px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: transparent;
+}
+
+/* =========================
+   Typografie Reset
+========================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #d6d6d6;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(0.6rem, 2vw, 0.8rem);
+  font-weight: 200;
+  letter-spacing: 2.5px;
+}
+
+/* =========================
+   Header
+========================= */
+header {
+  width: 25%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 0rem;
+  text-align: center;
+}
+
+/* =========================
+   Headline
+========================= */
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid rgba(211, 211, 211, 0.322);
+  border-radius: 15px;
+  background-color: rgba(16, 12, 20, 0.342);
+}
+
+h1 {
+  color: #d6d6d6;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.205);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 2.4rem);
+  font-weight: 200;
+  letter-spacing: 2.5px;
+}
+
+h3 {
+  color: #d6d6d6;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 200;
+  letter-spacing: 2.5px;
+}
+
+/* =========================
+   Main
+========================= */
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer p {
+  color: rgb(117, 116, 116);
+}
+
+.social-links a {
+  margin-bottom: 10px;
+  font-size: clamp(0.6rem, 2vw, 1rem);
+}
+
+footer a {
+  color: rgba(206, 206, 206, 0.5);
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+footer a:hover {
+  color: rgb(63, 200, 0);
+}
+
+footer a:not(:last-child)::after {
+  content: " |";
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.legal {
+  font-size: 0.6rem;
+  font-weight: 100;
+  margin-top: 1rem;
+}
+
+/* =========================
+   Media Queries
+========================= */
+
+@media (max-width: 600px) {
+  footer a:not(:last-child)::after {
+    content: "";
+  }
+  .social-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-links a {
+    margin: 2px;
+  }
+  footer a {
+    color: rgb(206, 206, 206);
+  }
+}
+
+@media (min-width: 2000px) {
+  .wrapper {
+    border: 1px solid rgba(68, 112, 26, 0.555);
+    margin-top: 2rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

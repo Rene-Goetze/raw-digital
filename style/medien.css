@@ -1,0 +1,176 @@
+/* =========================
+   Medien – Grundlayout
+========================= */
+.medien {
+  flex: 1;
+  text-align: center;
+}
+
+/* =========================
+   Typografie (Audio & Video)
+========================= */
+.audio h2,
+.video h2 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  font-size: clamp(0.6rem, 2.5vw, 1rem);
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+
+.audio h3,
+.video h3 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.audio h3 {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   Sektionen
+========================= */
+.audio,
+.video {
+  display: flex;
+  flex-direction: column;
+}
+
+.video {
+  margin-top: 2rem;
+}
+
+/* =========================
+   Clip-Container
+========================= */
+.audio-clips,
+.video-clips,
+.clips {
+  display: flex;
+  gap: 14px;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.78);
+}
+
+.audio-clips {
+  border: 1px solid rgba(119, 139, 114, 0.6);
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+.video-clips {
+  border: 1px solid rgba(119, 139, 114, 0.6);
+}
+
+.clips {
+  border: 1px solid lightgrey;
+  background-color: rgb(202, 199, 199);
+}
+
+/* =========================
+   Play Button
+========================= */
+.play-button {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+}
+
+.play {
+  margin-left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1;
+  background-color: #14750b67;
+  color: #070707;
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    background-color 0.2s;
+}
+
+.play:hover {
+  background-color: rgb(47, 150, 0);
+}
+
+.play-button:active .play {
+  transform: scale(0.9);
+}
+
+/* =========================
+   Video Preview
+========================= */
+.vid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.video-preview {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.video-preview img,
+.video-preview video {
+  width: 100%;
+  height: 100%;
+}
+
+.jazz-img {
+  border-radius: 10px;
+  object-fit: contain;
+  max-width: 84%;
+  height: auto;
+  filter: brightness(1);
+}
+
+.video-preview img {
+  object-fit: cover;
+  max-height: none;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.video-preview video {
+  object-fit: contain;
+  background: black;
+}
+
+/* =========================
+   Media Queries
+========================= */
+@media (max-width: 1300px) {
+  .audio-clips,
+  .video-clips,
+  .clips {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .medien {
+    flex: 0;
+  }
+}
