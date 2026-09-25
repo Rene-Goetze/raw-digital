@@ -1,0 +1,74 @@
+/* Container */
+.impress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Basis für fast alles */
+.impress h5,
+.impress p,
+.impress a,
+.impress .adress,
+.impress .email,
+.impress .raw,
+.impress .back,
+.impress .notice,
+.impress footer {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: clamp(0.6rem, 1.2vw, 0.8rem);
+}
+
+/* Überschrift */
+h2.headline {
+  margin: 40px;
+  color: white;
+}
+
+.raw {
+  margin-top: 2rem;
+}
+
+/* kleine Anpassungen für spezielle Elemente */
+
+/* Notice = dezenter */
+.notice {
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+/* Footer & Back etwas leichter */
+footer,
+.back {
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-top: 4rem;
+}
+
+/* Email darf etwas größer skalieren */
+.email {
+  font-size: clamp(0.6rem, 2vw, 0.85rem);
+  margin-top: 2rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Entfernt widersprüchliche alte Regeln */
+p.raw {
+  margin-bottom: 0;
+}
